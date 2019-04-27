@@ -38,7 +38,7 @@ Now move to __/src__ folder and try out first recognition with this command:
 python3 recognizer_image.py 
 ```
 The result should be something like below picture
-![Image](https://github.com/anhtuhsp/Face-Recognition-with-InsightFace/blob/master/datasets/test/friends.jpg)
+![Image](https://github.com/anhtuhsp/Face-Recognition-with-InsightFace/blob/master/datasets/test/GOT.jpg)
 You can also try with recognition in video with:
 ```
 python3 recognizer_video.py
