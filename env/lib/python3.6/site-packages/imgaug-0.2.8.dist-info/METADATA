@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: imgaug
+Version: 0.2.8
+Summary: Image augmentation library for deep neural networks
+Home-page: https://github.com/aleju/imgaug
+Author: Alexander Jung
+Author-email: kontakt@ajung.name
+License: MIT
+Download-URL: https://github.com/aleju/imgaug/archive/0.2.8.tar.gz
+Keywords: augmentation,image,deep learning,neural network,CNN,machine learning,computer vision,overfitting
+Platform: UNKNOWN
+Requires-Dist: scipy
+Requires-Dist: scikit-image (>=0.11.0)
+Requires-Dist: numpy (>=1.15.0)
+Requires-Dist: six
+Requires-Dist: imageio
+Requires-Dist: Pillow
+Requires-Dist: matplotlib
+Requires-Dist: Shapely
+Requires-Dist: opencv-python
+
+A library for image augmentation in machine learning experiments, particularly convolutional
+neural networks. Supports the augmentation of images, keypoints/landmarks, bounding boxes, heatmaps and segmentation
+maps in a variety of different ways.
+
