@@ -37,7 +37,7 @@ Now move to __/src__ folder and try out first recognition with this command:
 ```
 python3 recognizer_image.py 
 ```
-The result should be something like below picture
+The result should be something like this
 ![Image](https://github.com/anhtuhsp/Face-Recognition-with-InsightFace/blob/master/datasets/test/GOT.jpg)
 You can also try with recognition in video with:
 ```
@@ -50,7 +50,7 @@ python3 recognizer_stream.py
 ```
 Follow this link to see an example of video streaming [Streaming](https://youtu.be/WiPc3OY6Fgc)
 ## Build your own faces recognition system
-As default, most of the input and output arguments were provided, models and embeddings is set default stored in `/src/outputs/`.  
+By default, most of the input and output arguments were provided, models and embeddings is set default stored in `/src/outputs/`.  
 ### 1. Prepare your data 
 Our training datasets were built as following structure:
 ```
@@ -82,9 +82,9 @@ Prepare a video that contains face of the person you want to get and give the pa
 ```
 python3 get_faces_from_video.py [--video 'path/to/input/video'] [--output 'path/to/output/folder']
 ``` 
-As I don't provide stop condition to this script, so that you can get many faces as you want, you can also press __q__ button to stop process.</br>
+As I don't provide stop condition to this script, so that you can get as many faces as you want, you can also press __q__ button to stop the process.</br>
   
-The default output folder is `/unlabeled_faces`, select all faces that match the person you want, and copy the rest to `person_name` folder in `train`. Do the same things for others person to build your favorite datasets.
+The default output folder is `/unlabeled_faces`, select all faces that match the person you want, and copy them to `person_name` folder in `train`. Do the same things for others person to build your favorite datasets.
 ### 2. Generate face embeddings
 ```
 python3 faces_embedding.py [--dataset 'path/to/train/dataset'] [--output 'path/to/out/put/model']
