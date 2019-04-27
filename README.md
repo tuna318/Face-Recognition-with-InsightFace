@@ -72,12 +72,12 @@ Our training datasets were built as following structure:
 ```
 In each `/person_x` folder, put your face images corresponding to _person_name_ that has been resized to _112x112_ (input size for InsightFace). Here I provided two ways to get faces data from your webcam and video stored in your storage.  
 __a. Get faces from camera__  
-Run following command, with `--faces` defines how many faces you want to get, _default_ is _20_
+Run following command, with `--faces` defines how many faces you want to get, _default_ is 20
 ```
 python3 get_faces_from_camera.py [--faces 'num_faces'] [--output 'path/to/output/folder']
 ```
 Here `[--cmd]` means _cmd_ is optional, if not provide, script will run with its default settings.  
-__b. Get faces from video__
+__b. Get faces from video__  
 Prepare a video that contains face of the person you want to get and give the path to it to `--video` argument:
 ```
 python3 get_faces_from_video.py [--video 'path/to/input/video'] [--output 'path/to/output/folder']
