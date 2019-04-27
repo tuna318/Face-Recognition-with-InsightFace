@@ -23,7 +23,7 @@ Install pip:
 ```
 sudo apt install python3-pip
 ```
-Most of the necessary libraries were installed and stored in `env/` folder, so what we need is installing `virtualenv` to use this enviroment.
+Most of the necessary libraries were installed and stored in `env/` folder, so what we need is installing `virtualenv` to use this enviroment.  
 Install virtualenv:
 ```
 sudo pip3 install virtualenv virtualenvwrapper
