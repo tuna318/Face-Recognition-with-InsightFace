@@ -38,7 +38,7 @@ Now move to __/src__ folder and try out first recognition with this command:
 python3 recognizer_image.py 
 ```
 The result should be something like below picture
-![Image](https://drive.google.com/drive/u/0/folders/1l0hLGSZHZ9V1odIsRf3fZZ73qyEQ33sV)
+![Image](https://github.com/anhtuhsp/Face-Recognition-with-InsightFace/blob/master/datasets/test/friends.jpg)
 You can also try with recognition in video with:
 ```
 python3 recognizer_video.py
