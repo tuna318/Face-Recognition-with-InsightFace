@@ -50,7 +50,8 @@ python3 recognizer_stream.py
 ```
 Follow this link to see an example of video streaming [Streaming](#linkhere)
 ## Build your own faces recognition system
-### 1. Get data
+As default, most of the input and output arguments were provided, models and embeddings is set default stored in `/src/outputs/`.  
+### 1. Prepare your data 
 Our training datasets were built as following structure:
 ```
 /datasets
@@ -69,11 +70,45 @@ Our training datasets were built as following structure:
   /videos_input
   /videos_output
 ```
-
+In each `/person_x` folder, put your face images corresponding to _person_name_ that has been resized to _112x112_ (input size for InsightFace). Here I provided two ways to get faces data from your webcam and video stored in your storage.  
+__a. Get faces from camera__  
+Run following command, with `--faces` defines how many faces you want to get, _default_ is _20_
+```
+python3 get_faces_from_camera.py [--faces 'num_faces'] [--output 'path/to/output/folder']
+```
+Here `[--cmd]` means _cmd_ is optional, if not provide, script will run with its default settings.  
+__b. Get faces from video__
+Prepare a video that contains face of the person you want to get and give the path to it to `--video` argument:
+```
+python3 get_faces_from_video.py [--video 'path/to/input/video'] [--output 'path/to/output/folder']
+``` 
+As I don't provide stop condition to this script, so that you can get many faces as you want, you can also press __q__ button to stop process.</br>
+  
+The default output folder is `/unlabeled_faces`, select all faces that match the person you want, and copy the rest to `person_name` folder in `train`. Do the same things for others person to build your favorite datasets.
 ### 2. Generate face embeddings
+```
+python3 faces_embedding.py [--dataset 'path/to/train/dataset'] [--output 'path/to/out/put/model']
+```
 ### 3. Train classifier with softmax
-### 4. Run
+```
+python3 train_softmax.py [--embeddings 'path/to/embeddings/file'] [--model 'path/to/output/classifier_model'] [--le 'path/to/output/label_encoder']
+```
 
+### 4. Run
+Yep!! Now you have a trained model, let's enjoy it!  
+Face recognization with image as input:
+```
+python3 recognizer_image.py [--image-in 'path/to/test/image'] [...]
+```
+Face recognization with video as input:
+```
+python3 recognizer_video.py [--video 'path/to/test/video'] [...]
+```
+Face recognization with camera:
+```
+python3 recognizer_stream.py
+```
+`[...]` means other arguments, I don't provide it here, you can look up in the script at arguments part
 ## Others
 ### Using gpu for better performance
 I use __CPU__ for all recognition tasks for __mxnet__ haven't supported for __cuda__ in Ubuntu 18.10 yet. But if your machine has an Nvidia GPU and earlier version of Ubuntu, you can try it out for better performance both in speed and accuracy.
