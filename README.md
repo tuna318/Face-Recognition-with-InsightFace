@@ -1,4 +1,4 @@
-# Face Recognition
+# Face Recognition with InsightFace
 Recognize and manipulate faces with Python and its support libraries.
 The project uses [MTCNN](https://github.com/ipazc/mtcnn) for detecting faces, then applies a simple alignment and feeds those aligned faces into embeddings model that provided by [InsightFace](https://github.com/deepinsight/insightface). Finally, we put a softmax classifier on top of embedded vectors that will do classification task.
 
@@ -51,6 +51,25 @@ python3 recognizer_stream.py
 Follow this link to see an example of video streaming [Streaming](#linkhere)
 ## Build your own faces recognition system
 ### 1. Get data
+Our training datasets were built as following structure:
+```
+/datasets
+  /train
+    /person1
+      + face_01.jpg
+      + face_02.jpg
+      + ...
+    /person2
+      + face_01.jpg
+      + face_02.jpg
+      + ...
+    / ...
+  /test
+  /unlabeled_faces
+  /videos_input
+  /videos_output
+```
+
 ### 2. Generate face embeddings
 ### 3. Train classifier with softmax
 ### 4. Run
