@@ -43,7 +43,7 @@ You can also try with recognition in video with:
 ```
 python3 recognizer_video.py
 ```
-__Show gif here__
+![Video](https://github.com/anhtuhsp/Face-Recognition-with-InsightFace/blob/master/datasets/test/video.gif)
 or streaming if your machine supports camera:
 ```
 python3 recognizer_stream.py
