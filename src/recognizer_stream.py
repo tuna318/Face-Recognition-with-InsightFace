@@ -51,7 +51,7 @@ detector = MTCNN()
 embedding_model =face_model.FaceModel(args)
 
 # Load the classifier model
-model = load_model('outputs/my_model.h5')
+model = load_model(args.mymodel)
 
 # Define distance function
 def findCosineDistance(vector1, vector2):
